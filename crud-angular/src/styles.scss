@@ -17,6 +17,15 @@ html {
       density: 0,
     )
   );
+
+  // No Material 3 o `color="primary"` da toolbar não tem efeito,
+  // então a cor é definida aqui.
+  @include mat.toolbar-overrides(
+    (
+      container-background-color: var(--mat-sys-primary),
+      container-text-color: var(--mat-sys-on-primary),
+    )
+  );
 }
 
 body {
